@@ -1,4 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<h1>Componente seleccion</h1>
+
+<div *ngIf="mostrarComponente">
+  <app-seleccion
+    [contador]="contadorDesdePapa"
+  >
+  </app-seleccion>
+</div>
+
+<button class="btn btn-success"
+        (click)="contadorDesdePapa = contadorDesdePapa + 1"
+>
+  Aumentar valor de contador
+</button>
+
+<button class="btn btn-info"
+        (click)="mostrarComponente = !mostrarComponente"
+>
+  Cambiar mostrar seleccion
+</button>
+
+<!--
+
 <div class="row">
   <div class="col-sm-12">
     <h1>Bindings</h1>
@@ -27,13 +49,17 @@
       Aumentar imagen
     </button>
 
-    <h1 (mouseenter)="imagenWidth = imagenWidth - 20">
-      Restar imagen</h1>
+    <h1
+      (mouseenter)="restarWidth()"> Restar imagen
+    </h1>
+
 
     <h3> NgModel (two way data bindings) [()] </h3>
 
     <label for="width">Width</label>
-    <input id="width" type="text" [(ngModel)]="imagenWidth">
+
+    <input id="width" type="text"
+           [(ngModel)]="imagenWidth">
 
 
   </div>
@@ -73,6 +99,12 @@
 
       </li>
     </ul>
+
+
   </div>
   <div class="col-sm-4"></div>
 </div>
+
+-->
+
+

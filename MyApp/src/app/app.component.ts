@@ -9,6 +9,9 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   // Interpolacion
+  mostrarComponente = false;
+  contadorDesdePapa = 0;
+
   titulo = 'Web';
   usuario = {
     nombre: 'Adrian',
@@ -26,5 +29,15 @@ export class AppComponent {
   <img src="${this.imagenUrl}" alt="">
 `;
 
+  aumentarWidth(evento) {
+    console.log('evento', evento);
+    this.imagenWidth += 10;
+  }
+
+  restarWidth() {
+    this.imagenWidth -= 10;
+  }
+
 
 }
+
